@@ -39,11 +39,6 @@ namespace BandTracker
             return _name;
         }
 
-        public void SetName(string newName)
-        {
-            _name = newName;
-        }
-
         public static List<Band> GetAll()
         {
             List<Band> AllBands = new List<Band>{};
