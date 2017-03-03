@@ -72,6 +72,26 @@ namespace BandTracker
                 return View["venues.cshtml", AllVenues];
             };
 
+            Post["/venues/delete"] = _ => {
+                Venue.DeleteAll();
+                List<Venue> AllVenues = Venue.GetAll();
+                return View["venues.cshtml", AllVenues];
+            };
+            Post["/bands/delete"] = _ => {
+                Band.DeleteAll();
+                List<Band> AllBands = Band.GetAll();
+                return View["bands.cshtml", AllBands];
+            };
+            Get["venue/delete/{id}"] = parameters => {
+               Venue SelectedVenue = Venue.Find(parameters.id);
+               return View["venue_delete.cshtml", SelectedVenue];
+           };
+           Delete["venue/delete/{id}"] = parameters => {
+               Venue SelectedVenue = Venue.Find(parameters.id);
+               SelectedVenue.Delete();
+               List<Venue> AllVenues = Venue.GetAll();
+               return View["venues.cshtml", AllVenues];
+           };
 
         }
     }
