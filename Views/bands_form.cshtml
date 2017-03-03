@@ -1,0 +1,24 @@
+@{
+    Layout="Shared/_Layout.cshtml";
+}
+
+<h1>Add A New Band</h1>
+
+<form action="/bands" method="post">
+<div class="form-group">
+  <label for="band-name">Band Name:</label>
+  <input class="form-control" id="band-name" name="band-name" type="text">
+</div>
+<div class="form-group">
+  <label for="venue-id">Add A Venue:</label>
+  <select class="form-control" name="venue-id">
+      @foreach (var venue in Model)
+      {
+          <option value="@venue.GetId()">@venue.GetName()</ooption>
+      }
+  </select>
+  </div>
+  <button type="submit">Add New Band</button>
+</form>
+
+<h3><a href="/venues/new">Add A Venue</a> | <a href="/">Return Home</a> | <a href="/bands/new">Add A Band</a></h3>
