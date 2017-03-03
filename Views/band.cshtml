@@ -3,19 +3,18 @@
 }
 
 <div class="container">
-@if (@Model["venues"].Count == 0)
-{
-  <h3>No venues have been added for @Model["bands"].GetName() yet!</h3>
-}
-else
-{
-<h3>Venues for @Model["bands"].GetName():</h3>
+    @if (@Model["venues"].Count == 0)
+    {
+      <h3>No venues have been added for @Model["bands"].GetName() yet!</h3>
+    }
+    else
+    {
+    <h3>Venues for @Model["bands"].GetName():</h3>
 
-@foreach (var venue in Model["bands"].GetVenues())
-{
-    <h3><a href="/venues/@venue.GetId()">@venue.GetName()</h3>
-}
-}
-
-<h3><a href="/venues/new">Add A Venue</a> | <a href="/">Return Home</a> | <a href="/bands/new">Add A Band</a></h3>
+    @foreach (var venue in Model["bands"].GetVenues())
+    {
+        <h3><a href="/venues/@venue.GetId()">@venue.GetName()</h3>
+    }
+    }
+    <h3><a href="/venues/new">Add A Venue</a> | <a href="/">Return Home</a> | <a href="/bands/new">Add A Band</a></h3>
 </div>
