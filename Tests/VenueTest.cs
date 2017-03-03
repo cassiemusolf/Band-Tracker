@@ -80,6 +80,27 @@ namespace BandTracker
             Assert.Equal(testVenue, foundVenue);
         }
 
+        [Fact]
+        public void Test_Delete_DeletesVenueFromDatabase()
+        {
+          //Arrange
+          string name1 = "The Gorge";
+          Venue testVenue1 = new Venue(name1);
+          testVenue1.Save();
+
+          string name2 = "White River Ampitheater";
+          Venue testVenue2 = new Venue(name2);
+          testVenue2.Save();
+
+          //Act
+          testVenue1.Delete();
+          List<Venue> resultVenues = Venue.GetAll();
+          List<Venue> testVenueList = new List<Venue> {testVenue2};
+
+          //Assert
+          Assert.Equal(testVenueList, resultVenues);
+        }
+
         public void Dispose()
         {
           Band.DeleteAll();
