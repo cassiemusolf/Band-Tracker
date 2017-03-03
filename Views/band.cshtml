@@ -12,6 +12,8 @@ else
 
 @foreach (var venue in Model["bands"].GetVenues())
 {
-    <h3><a href="/bands/@Model["bands"].GetId()">@venue.GetName()</h3>
+    <h3><a href="/venues/@venue.GetId()">@venue.GetName()</h3>
 }
 }
+
+<h3><a href="/venues/new">Add A Venue</a> | <a href="/">Return Home</a> | <a href="/bands/new">Add A Band</a></h3>
