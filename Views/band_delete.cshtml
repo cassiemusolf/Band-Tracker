@@ -2,9 +2,9 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<h1>Are you sure you want to delete this venue?</h1>
+<h1>Are you sure you want to delete this band?</h1>
 
-<form action="/venue/delete/@Model.GetId()" method="post">
+<form action="/band/delete/@Model.GetId()" method="post">
     <div class="form-group edit-name">
         <label><h2>@Model.GetName()</h2></label>
       <input type="hidden" name="_method" value="DELETE">

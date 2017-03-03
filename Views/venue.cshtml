@@ -4,7 +4,7 @@
 
 @if (@Model.Count == 0)
 {
-  <h3>No bands have been added for this venue yet!</h3>
+  <h3>No bands have been added for @Model["venues"].GetName() yet!</h3>
 }
 else
 {
