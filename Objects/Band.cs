@@ -32,7 +32,7 @@ namespace BandTracker
 
         public static List<Band> GetAll()
         {
-            List<Band> All Bands = new List<Band>{}
+            List<Band> AllBands = new List<Band>{};
 
             SqlConnection conn = DB.Connection();
             conn.Open();

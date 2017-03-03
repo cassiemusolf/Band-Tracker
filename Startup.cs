@@ -37,7 +37,6 @@ namespace BandTracker
         {
             get { return false; }
         }
-
     }
 
     public static class DBConfiguration
