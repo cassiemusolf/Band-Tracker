@@ -2,7 +2,7 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-
+<div class="container">
 <h2>Edit Venue: @Model.GetName()</h2>
 <form action="/venue/edit/@Model.GetId()" method="post">
 <div class="form-group">
@@ -17,3 +17,4 @@
 </form>
 
 <h3><a href="/venues/new">Add A Venue</a> | <a href="/">Return Home</a> | <a href="/bands/new">Add A Band</a></h3>
+</div>

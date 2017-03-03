@@ -2,13 +2,14 @@
   Layout="Shared/_Layout.cshtml";
 }
 
+<div class="container">
 @if (@Model.Count == 0)
 {
   <h3>No bands have been added for @Model["venues"].GetName() yet!</h3>
 }
 else
 {
-<h3>Bands playing at @Model["venues"].GetName():</h3>
+<h3>Bands Playing At @Model["venues"].GetName():</h3>
 
 @foreach (var band in Model["venues"].GetBands())
 {
@@ -17,3 +18,4 @@ else
 }
 
 <h3><a href="/venues/new">Add A Venue</a> | <a href="/">Return Home</a> | <a href="/bands/new">Add A Band</a></h3>
+</div>
