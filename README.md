@@ -2,7 +2,7 @@
 
 #### _Webpage to Save and Search Bands and Venues_
 
-#### By _**Cassie Musolf_
+#### By _**Cassie Musolf**_
 
 ## Description
 
