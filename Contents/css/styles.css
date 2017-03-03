@@ -13,6 +13,8 @@ body {
     text-align: center;
     background-position: bottom;
     font-family: 'Barrio', cursive;
+    border-bottom: 3px solid gold;
+    text-shadow: 3px 2px gold;
 }
 
 h1.title {
@@ -22,19 +24,18 @@ h1.title {
 .mainpics {
     margin-left: 2%;
     margin-right: auto;
-    border:
 }
 
 .mainpic1 {
     width: 45%;
     height: auto;
-    border: 2px solid #4A0791;
+    border: 2px solid gold;
 }
 
 .mainpic2 {
     width: 45%;
     height: auto;
-    border: 2px solid #4A0791;
+    border: 2px solid gold;
 }
 
 h2 {

@@ -55,6 +55,14 @@ This web application will allow users to add and view specific bands and see the
 * Use command "dnu restore" in command prompt/shell
 * Use command "dnx kestrel" to start server
 * Navigate to http://localhost:5004 in web browser of choice
+* Import the DATABASE schema or -
+* In SQLCMD:
+    CREATE DATABASE band_tracker;
+    GO
+    USE band_tracker;
+    GO
+    CREATE TABLE bands (id INT IDENTITY(1,1), name VARCHAR(255));
+    CREATE TABLE venues (id INT IDENTITY(1,1), name VARCHAR(255));
 
 ## Support and contact details
 
