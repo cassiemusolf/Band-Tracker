@@ -147,6 +147,28 @@ namespace BandTracker
           Assert.Equal(testVenueList, resultVenues);
         }
 
+        [Fact]
+       public void Test_Delete_DeletesVenueAssociationsFromDatabase()
+       {
+         //Arrange
+         Band testBand = new Band("Beyonce");
+         testBand.Save();
+
+         string testName = "Key Arena";
+         Venue testVenue = new Venue(testName);
+         testVenue.Save();
+
+         //Act
+         testVenue.AddBand(testBand);
+         testVenue.Delete();
+
+         List<Venue> resultBandVenues = testBand.GetVenues();
+         List<Venue> testBandVenues = new List<Venue> {};
+
+         //Assert
+         Assert.Equal(testBandVenues, resultBandVenues);
+       }
+
         public void Dispose()
         {
           Band.DeleteAll();

@@ -214,7 +214,7 @@ namespace BandTracker
             SqlConnection conn = DB.Connection();
             conn.Open();
 
-            SqlCommand cmd = new SqlCommand("DELETE FROM venues WHERE id = @VenueId;", conn);
+            SqlCommand cmd = new SqlCommand("DELETE FROM venues WHERE id = @VenueId; DELETE FROM bands_venues WHERE venue_id = @VenueId;", conn);
 
             SqlParameter venueIdParameter = new SqlParameter();
             venueIdParameter.ParameterName = "@VenueId";
