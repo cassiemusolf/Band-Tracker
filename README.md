@@ -1,6 +1,6 @@
 # Band Tracker
 
-#### _Webpage to Save and Search Recipes_
+#### _Webpage to Save and Search Bands and Venues_
 
 #### By _**Cassie Musolf_
 
