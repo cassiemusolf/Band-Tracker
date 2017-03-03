@@ -78,7 +78,6 @@ namespace BandTracker
           SqlParameter nameParameter = new SqlParameter();
           nameParameter.ParameterName = "@BandName";
           nameParameter.Value = this.GetName();
-
           cmd.Parameters.Add(nameParameter);
 
           SqlDataReader rdr = cmd.ExecuteReader();
@@ -108,6 +107,7 @@ namespace BandTracker
            bandIdParameter.ParameterName = "@BandId";
            bandIdParameter.Value = id.ToString();
            cmd.Parameters.Add(bandIdParameter);
+
            SqlDataReader rdr = cmd.ExecuteReader();
 
            int foundBandId = 0;
